@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080d1b"><meta name="description" content="CH AI — HSC study, syllabus, tasks, study timer and personal notes.">
+<title>CH AI • HSC Companion</title>
+<style>
+:root{--bg:#080d1b;--panel:#10182a;--panel2:#151f35;--line:#293650;--text:#f3f6ff;--muted:#9aa9c5;--a:#8b5cf6;--b:#22d3ee;--good:#34d399;--warn:#fbbf24;--bad:#fb7185;--r:18px}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 12% 0%,#1b1b46 0,transparent 32%),radial-gradient(circle at 95% 12%,#10313a 0,transparent 28%),var(--bg);color:var(--text);font:14px/1.55 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}button,input,textarea,select{font:inherit}button{border:1px solid var(--line);background:#17223a;color:var(--text);border-radius:11px;padding:10px 13px;cursor:pointer}button:hover{border-color:var(--a)}button.primary{border:0;background:linear-gradient(120deg,var(--a),#6555ef);font-weight:750}button.danger{color:#fecdd3;border-color:#693347;background:#301b2b}input,textarea,select{width:100%;padding:11px 12px;background:#0b1324;border:1px solid var(--line);border-radius:11px;color:var(--text);outline:none}input:focus,textarea:focus,select:focus{border-color:var(--b)}textarea{resize:vertical;min-height:90px}.app{max-width:1250px;margin:auto;padding:18px 18px 38px}.top{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:7px 0 18px}.brand{display:flex;align-items:center;gap:11px}.logo{height:46px;width:46px;border-radius:15px;display:grid;place-items:center;font-weight:1000;font-size:22px;color:#09101f;background:linear-gradient(135deg,var(--b),#a78bfa);box-shadow:0 8px 30px #8b5cf633}.brand h1{font-size:20px;line-height:1.1;margin:0}.brand p{margin:5px 0 0;color:var(--muted);font-size:11px}.topright{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.badge{border:1px solid var(--line);padding:6px 10px;border-radius:999px;color:var(--muted);font-size:11px}.layout{display:grid;grid-template-columns:205px minmax(0,1fr);gap:17px}.nav{display:flex;flex-direction:column;gap:6px;align-self:start;position:sticky;top:12px}.nav button{text-align:left;background:transparent;border-color:transparent;color:var(--muted);display:flex;gap:10px;align-items:center}.nav button.active{background:#1a2440;border-color:#394565;color:white}.nav .navicon{width:20px;text-align:center;font-size:17px}.main{min-width:0}.page{display:none}.page.active{display:block}.hero{border:1px solid #3a4167;border-radius:22px;padding:24px;background:linear-gradient(115deg,#201d4a,#14243d 60%,#103038);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}.eyebrow{color:#c4b5fd;text-transform:uppercase;letter-spacing:.13em;font-size:10px;font-weight:850}.hero h2{font-size:clamp(27px,4vw,40px);line-height:1.1;letter-spacing:-1px;margin:9px 0}.hero p{max-width:650px;color:#bdc9e1;margin:0}.hero-ring{width:122px;height:122px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--b) calc(var(--p)*1%),#ffffff13 0);position:relative}.hero-ring:before{content:"";position:absolute;inset:8px;border-radius:50%;background:#111a31;border:1px solid var(--line)}.ringtext{position:relative;text-align:center}.ringtext strong{display:block;font-size:28px}.ringtext span{font-size:10px;color:var(--muted)}.notice{margin-top:13px;padding:10px 12px;border:1px solid #6b572b;background:#2a2417;color:#f6d992;border-radius:12px;font-size:11px}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;margin:14px 0}.stat,.card{background:linear-gradient(180deg,#131d32,#0e1627);border:1px solid var(--line);border-radius:var(--r);padding:16px}.stat strong{font-size:25px;display:block;line-height:1.25}.stat span{font-size:11px;color:var(--muted)}.stat .sicon{float:right;color:var(--b);font-size:19px}.twocol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.sectionhead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:2px 0 12px}.sectionhead h2{font-size:19px;margin:0}.sectionhead p{font-size:11px;color:var(--muted);margin:3px 0 0}.field{display:grid;gap:5px;margin:10px 0}.field label{color:var(--muted);font-size:11px}.row{display:flex;gap:8px;align-items:center}.row>*{min-width:0}.row .grow{flex:1}.toolbar{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:15px 0}.filters{display:flex;gap:6px;flex-wrap:wrap}.chip{border-radius:999px;font-size:11px;padding:7px 10px}.chip.active{background:#35275e;border-color:#7356bc;color:#e9ddff}.subjectgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.subject{padding:0;overflow:hidden}.subjecthead{padding:15px 16px 10px;display:flex;justify-content:space-between;gap:8px}.subjecthead h3{font-size:14px;margin:0}.subjecthead small{display:block;color:var(--muted);font-size:10px}.pct{font-weight:800;color:#c4b5fd}.progress{height:6px;border-radius:99px;background:#ffffff12;overflow:hidden;margin:0 16px 10px}.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--a),var(--b))}.paper{border-top:1px solid var(--line)}.paper summary{cursor:pointer;padding:10px 15px;display:flex;justify-content:space-between;list-style:none;font-size:11px}.paper summary::-webkit-details-marker{display:none}.paperitems{padding:0 10px 10px}.syllitem{display:flex;align-items:flex-start;gap:9px;padding:8px;border-radius:9px}.syllitem:hover{background:#ffffff07}.syllitem input{appearance:none;flex:none;width:18px;height:18px;padding:0;margin:2px 0 0;border-radius:5px;background:#0b1324}.syllitem input:checked{background:var(--good);border-color:var(--good)}.syllitem input:checked:after{content:"✓";display:block;text-align:center;color:#052e21;font-weight:900}.syllitem span{font-size:11px}.syllitem.done span{text-decoration:line-through;color:#8f9bb0}.item{padding:11px 0;border-bottom:1px solid var(--line)}.item:last-child{border-bottom:0}.itemtop{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.itemtop strong{font-size:12px}.meta{font-size:10px;color:var(--muted);margin-top:3px}.tag{display:inline-block;font-size:9px;color:#a5f3fc;border:1px solid #255361;border-radius:6px;padding:2px 6px;margin:3px 4px 0 0}.checkrow{display:flex;gap:9px;align-items:flex-start}.checkrow input{width:17px;flex:none;margin-top:3px}.checkrow.done span{text-decoration:line-through;color:var(--muted)}.empty{text-align:center;color:var(--muted);padding:22px;font-size:12px}.timerbox{text-align:center;padding:24px 10px}.timerdisplay{font-size:clamp(48px,9vw,75px);font-variant-numeric:tabular-nums;font-weight:850;letter-spacing:-3px;line-height:1.3}.timerlabel{color:var(--muted);font-size:12px}.timerbuttons{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:14px}.session{display:grid;grid-template-columns:1fr 1fr;gap:10px}.notegrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.note{background:#0b1425;border:1px solid var(--line);border-radius:12px;padding:13px}.note p{white-space:pre-wrap;color:#c2cde0;font-size:12px}.small{font-size:10px;color:var(--muted)}footer{text-align:center;padding:25px 0 0;color:#6f7d99;font-size:10px}
+@media(max-width:850px){.layout{grid-template-columns:1fr}.nav{position:static;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}.nav button{font-size:11px;justify-content:center;padding:9px 4px}.hero{grid-template-columns:1fr auto}.subjectgrid{grid-template-columns:1fr}}@media(max-width:560px){.app{padding:12px 10px 30px}.hero{grid-template-columns:1fr;padding:19px}.hero-ring{width:95px;height:95px}.stats{grid-template-columns:repeat(2,1fr)}.twocol,.notegrid,.session{grid-template-columns:1fr}.nav{grid-template-columns:repeat(3,1fr)}.nav button{flex-direction:column;gap:1px}.navicon{font-size:15px!important}.brand h1{font-size:18px}}
+</style>
+</head>
+<body><div class="app">
+<header class="top"><div class="brand"><div class="logo">CH</div><div><h1>CH AI</h1><p>HSC Companion · Study · Goals · Self-growth</p></div></div><div class="topright"><span class="badge">LOCAL-FIRST</span><button id="exportTop">Export backup</button></div></header>
+<div class="layout">
+<nav class="nav">
+<button class="active" data-page="home"><span class="navicon">⌂</span>Overview</button>
+<button data-page="syllabus"><span class="navicon">☑</span>HSC Syllabus</button>
+<button data-page="tasks"><span class="navicon">✓</span>Tasks & Goals</button>
+<button data-page="timer"><span class="navicon">◷</span>Study Timer</button>
+<button data-page="notes"><span class="navicon">▤</span>Self Notes</button>
+<button data-page="review"><span class="navicon">▥</span>Study Log</button>
+<button data-page="settings"><span class="navicon">⚙</span>Backup & Settings</button>
+</nav>
+<main class="main">
+<section class="page active" id="home">
+<div class="hero"><div><div class="eyebrow">Your HSC journey, organized</div><h2>Small progress.<br><span style="color:#a5f3fc">Every single day.</span></h2><p>Track your syllabus, focus time, daily tasks and personal goals in one place. Your data stays in this browser unless you export it.</p><div class="notice">Syllabus list follows the chapter/topic structure in the supplied HSC tracker code. Confirm the latest official board syllabus with your college/NCTB notice before treating it as final.</div></div><div class="hero-ring" id="ring" style="--p:0"><div class="ringtext"><strong id="overall">0%</strong><span>syllabus done</span></div></div></div>
+<div class="stats"><div class="stat"><span class="sicon">☑</span><strong id="doneCount">0</strong><span>Syllabus topics done</span></div><div class="stat"><span class="sicon">◷</span><strong id="totalMinutes">0m</strong><span>Total study time logged</span></div><div class="stat"><span class="sicon">✓</span><strong id="openTasks">0</strong><span>Open tasks</span></div><div class="stat"><span class="sicon">◎</span><strong id="streak">0</strong><span>Study days recorded</span></div></div>
+<div class="twocol"><div class="card"><div class="sectionhead"><h2>Today’s focus</h2><button onclick="go('tasks')">View tasks</button></div><div id="todayTasks"></div></div><div class="card"><div class="sectionhead"><h2>Quick start</h2></div><p class="small">Start a focus session, check off a chapter, or save a thought before you forget it.</p><div class="actions"><button class="primary" onclick="go('timer')">Start study timer</button><button onclick="go('syllabus')">Open syllabus</button><button onclick="go('notes')">Write a note</button></div><div class="notice" style="border-color:#245761;background:#10282e;color:#a5f3fc">Tip: export a backup before changing browsers or devices.</div></div></div>
+</section>
+<section class="page" id="syllabus"><div class="sectionhead"><div><h2>HSC Syllabus Tracker</h2><p>Tick topics as you complete them. Progress saves automatically on this device.</p></div><button onclick="resetSyllabus()" class="danger">Reset progress</button></div><div class="toolbar"><div class="filters"><button class="chip active" data-filter="all">All</button><button class="chip" data-filter="science">Science</button><button class="chip" data-filter="languages">Bangla + English</button><button class="chip" data-filter="other">ICT</button></div><div style="min-width:180px;flex:1;max-width:330px"><input id="syllSearch" placeholder="Search chapter / topic…"></div></div><div class="subjectgrid" id="subjects"></div></section>
+<section class="page" id="tasks"><div class="sectionhead"><div><h2>Tasks & Goals</h2><p>Turn big ambitions into small, trackable actions.</p></div></div><div class="twocol"><div class="card"><h3 style="margin-top:0">Add a task</h3><div class="field"><label>Task name</label><input id="taskTitle" placeholder="e.g. Revise Newton's laws"></div><div class="row"><div class="field grow"><label>Due date (optional)</label><input id="taskDue" type="date"></div><div class="field grow"><label>Priority</label><select id="taskPriority"><option>Normal</option><option>High</option><option>Low</option></select></div></div><div class="field"><label>Category</label><select id="taskCategory"><option>Study</option><option>Personal</option><option>Project</option><option>Health & routine</option><option>Other</option></select></div><button class="primary" onclick="addTask()">Add task</button><div id="taskList" style="margin-top:13px"></div></div><div class="card"><h3 style="margin-top:0">Goals</h3><div class="field"><label>Goal</label><input id="goalTitle" placeholder="e.g. Finish Physics 1st paper"></div><div class="field"><label>Target date (optional)</label><input id="goalDue" type="date"></div><button class="primary" onclick="addGoal()">Add goal</button><div id="goalList" style="margin-top:13px"></div></div></div></section>
+<section class="page" id="timer"><div class="sectionhead"><div><h2>Study Timer</h2><p>Focus sessions are logged when you finish them. Keep the page open while timing.</p></div></div><div class="twocol"><div class="card timerbox"><div class="timerlabel" id="timerLabel">FOCUS SESSION</div><div class="timerdisplay" id="timerDisplay">25:00</div><div class="field" style="max-width:230px;margin:12px auto"><label>Session length (minutes)</label><input id="duration" type="number" min="1" max="180" value="25"></div><div class="timerbuttons"><button class="primary" id="startPause" onclick="toggleTimer()">Start focus</button><button onclick="resetTimer()">Reset</button></div><p class="small">Timer may pause if the browser/device suspends this tab. The log uses elapsed time.</p></div><div class="card"><h3 style="margin-top:0">Finish a session</h3><div class="field"><label>Subject / activity</label><select id="sessionSubject"><option>Physics</option><option>Chemistry</option><option>Higher Mathematics</option><option>Biology</option><option>Bangla</option><option>English</option><option>ICT</option><option>Revision</option><option>Other</option></select></div><div class="field"><label>What will you work on?</label><input id="sessionTopic" placeholder="Chapter, problem set, revision..."></div><div class="field"><label>Quick reflection (optional)</label><textarea id="sessionReflection" placeholder="What did you learn? What is still unclear?"></textarea></div><button onclick="logManualSession()">Log a completed session manually</button></div></div></section>
+<section class="page" id="notes"><div class="sectionhead"><div><h2>Self Notes</h2><p>Private reminders, reflections, lessons learned and ideas.</p></div></div><div class="card"><div class="field"><label>Title</label><input id="noteTitle" placeholder="A thought to remember"></div><div class="row"><div class="field grow"><label>Type</label><select id="noteType"><option>Self-reflection</option><option>Study note</option><option>Idea</option><option>Reminder</option><option>Personal goal</option></select></div><div class="field grow"><label>Subject (optional)</label><input id="noteSubject" placeholder="Physics, life, project..."></div></div><div class="field"><label>Note</label><textarea id="noteBody" rows="5" placeholder="Write freely..."></textarea></div><button class="primary" onclick="addNote()">Save note</button></div><div class="sectionhead" style="margin-top:17px"><h2>Saved notes</h2><input id="noteSearch" style="max-width:250px" placeholder="Search notes..." oninput="renderNotes()"></div><div class="notegrid" id="noteList"></div></section>
+<section class="page" id="review"><div class="sectionhead"><div><h2>Study Log</h2><p>Review completed focus sessions and reflections.</p></div></div><div class="card"><div class="sectionhead"><h3 style="margin:0">Session history</h3><span class="badge" id="logTotal">0 sessions</span></div><div id="logList"></div></div></section>
+<section class="page" id="settings"><div class="sectionhead"><div><h2>Backup & Settings</h2><p>Each person has a separate copy of this file and their own browser data.</p></div></div>
+<div class="card" style="margin-bottom:13px">
+  <h3 style="margin-top:0">Cloud account & sync</h3>
+  <p class="small">Create an account or log in to sync your CH AI data across devices. Configure your Supabase project first; until then, this app remains local-only.</p>
+  <div class="twocol">
+    <div class="field"><label>Email</label><input id="authEmail" type="email" autocomplete="email" placeholder="you@example.com"></div>
+    <div class="field"><label>Password</label><input id="authPassword" type="password" autocomplete="current-password" placeholder="At least 6 characters"></div>
+  </div>
+  <div class="row" style="flex-wrap:wrap">
+    <button class="primary" id="signUpBtn" type="button">Create account</button>
+    <button id="signInBtn" type="button">Log in</button>
+    <button id="signOutBtn" type="button" hidden>Log out</button>
+    <button id="syncNowBtn" type="button">Sync now</button>
+  </div>
+  <p id="cloudStatus" class="notice" role="status" aria-live="polite">Cloud sync is not configured yet. Local data still works in this browser.</p>
+</div>
+
+<div class="card"><h3 style="margin-top:0">Personal data backup</h3><p class="small">Export tasks, goals, syllabus progress, study logs and notes to JSON. Import a backup to restore it on this browser.</p><div class="actions"><button class="primary" onclick="exportData()">Export JSON backup</button><label style="cursor:pointer;border:1px solid var(--line);background:#17223a;padding:10px 13px;border-radius:11px">Import JSON<input id="importFile" type="file" accept="application/json,.json" hidden onchange="importData(event)"></label></div><div class="notice">Privacy: information is stored in localStorage on this device, not in a shared online account. Anyone using the same browser profile may be able to access it. Avoid saving passwords or highly sensitive information.</div></div><div class="card" style="margin-top:13px"><h3 style="margin-top:0">About CH AI</h3><p class="small">CH AI is a free, shareable, offline-first study organizer. It does not currently include a real generative AI chatbot, cloud sync, accounts or live web research. The syllabus entries are taken from the supplied tracker code and may need official syllabus updates.</p><button class="danger" onclick="clearAll()">Delete all CH AI data on this browser</button></div></section>
+</main></div><footer>CH AI • HSC Companion • Free local-first version • Export your backup regularly</footer></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const DATA=[
+{id:'phy1',group:'science',name:'Physics 1st Paper',bn:'পদার্থবিজ্ঞান ১ম পত্র',items:['1. ভৌতজগৎ ও পরিমাপ','2. ভেক্টর','3. গতিবিদ্যা','4. নিউটনিয়ান বলবিদ্যা','5. কাজ, শক্তি ও ক্ষমতা','6. মহাকর্ষ ও অভিকর্ষ','7. পদার্থের গাঠনিক ধর্ম','8. পর্যাবৃত্ত গতি','9. তরঙ্গ','10. আদর্শ গ্যাস ও গ্যাসের গতিতত্ত্ব']},
+{id:'phy2',group:'science',name:'Physics 2nd Paper',bn:'পদার্থবিজ্ঞান ২য় পত্র',items:['1. তাপগতিবিদ্যা','2. স্থির তড়িৎ','3. চল তড়িৎ','4. তড়িৎ প্রবাহের চৌম্বক ক্রিয়া ও চুম্বকত্ব','5. তাড়িতচৌম্বকীয় আবেশ ও পরিবর্তী প্রবাহ','6. জ্যামিতিক আলোকবিজ্ঞান','7. ভৌত আলোকবিজ্ঞান','8. আধুনিক পদার্থবিজ্ঞানের সূচনা','9. পরমাণুর মডেল এবং নিউক্লিয়ার পদার্থবিজ্ঞান','10. সেমিকন্ডাক্টর ও ইলেকট্রনিক্স','11. জ্যোতির্বিজ্ঞান']},
+{id:'chem1',group:'science',name:'Chemistry 1st Paper',bn:'রসায়ন ১ম পত্র',items:['1. ল্যাবরেটরির নিরাপদ ব্যবহার','2. গুণগত রসায়ন','3. মৌলের পর্যায়বৃত্ত ধর্ম ও রাসায়নিক বন্ধন','4. রাসায়নিক পরিবর্তন','5. কর্মমুখী রসায়ন']},
+{id:'chem2',group:'science',name:'Chemistry 2nd Paper',bn:'রসায়ন ২য় পত্র',items:['1. পরিবেশ রসায়ন','2. জৈব রসায়ন','3. পরিমাণগত রসায়ন','4. তড়িৎ রসায়ন','5. অর্থনৈতিক রসায়ন']},
+{id:'hm1',group:'science',name:'Higher Math 1st Paper',bn:'উচ্চতর গণিত ১ম পত্র',items:['1. ম্যাট্রিক্স ও নির্ণায়ক','2. ভেক্টর','3. সরলরেখা','4. বৃত্ত','5. বিন্যাস ও সমাবেশ','6. ত্রিকোণমিতিক অনুপাত','7. সংযুক্ত কোণের ত্রিকোণমিতিক অনুপাত','8. ফাংশন ও ফাংশনের লেখচিত্র','9. অন্তরীকরণ','10. যোগজীকরণ']},
+{id:'hm2',group:'science',name:'Higher Math 2nd Paper',bn:'উচ্চতর গণিত ২য় পত্র',items:['1. বাস্তব সংখ্যা ও অসমতা','2. যোগাশ্রয়ী প্রোগ্রাম','3. জটিল সংখ্যা','4. বহুপদী ও বহুপদী সমীকরণ','5. দ্বিপদী বিস্তৃতি','6. কণিক','7. ত্রিকোণমিতিক ফাংশন','8. স্থিতিবিদ্যা','9. সমতলে বস্তুকণার গতি','10. বিস্তার পরিমাপ ও সম্ভাবনা']},
+{id:'botany',group:'science',name:'Biology 1st Paper • Botany',bn:'উদ্ভিদবিজ্ঞান • জীববিজ্ঞান ১ম পত্র',items:['1. কোষ ও এর গঠন','2. কোষ বিভাজন','3. কোষ রসায়ন','4. অণুজীব','5. শৈবাল ও ছত্রাক','6. ব্রায়োফাইটা ও টেরিডোফাইটা','7. নগ্নবীজী ও আবৃতবীজী','8. টিস্যু ও টিস্যুতন্ত্র','9. উদ্ভিদ শারীরতত্ত্ব','10. উদ্ভিদ প্রজনন','11. জীবপ্রযুক্তি','12. জীবের পরিবেশ, বিস্তরণ ও সংরক্ষণ']},
+{id:'zoology',group:'science',name:'Biology 2nd Paper • Zoology',bn:'প্রাণীবিজ্ঞান • জীববিজ্ঞান ২য় পত্র',items:['1. প্রাণীর বিভিন্নতা ও শ্রেণিবিন্যাস','2. প্রাণীর পরিচিতি','3. মানব শারীরতত্ত্ব: পরিপাক ও শোষণ','4. মানব শারীরতত্ত্ব: রক্ত ও সংবহন','5. মানব শারীরতত্ত্ব: শ্বসন ও শ্বাসক্রিয়া','6. মানব শারীরতত্ত্ব: বর্জ্য ও নিষ্কাশন','7. মানব শারীরতত্ত্ব: চলন ও অঙ্গচালনা','8. মানব শারীরতত্ত্ব: সমন্বয় ও নিয়ন্ত্রণ','9. মানব জীবনের ধারাবাহিকতা','10. মানবদেহের প্রতিরক্ষা','11. জিনতত্ত্ব ও বিবর্তন','12. প্রাণীর আচরণ']},
+{id:'bangla1',group:'languages',name:'Bangla 1st Paper',bn:'বাংলা ১ম পত্র',items:['গদ্য 01 • বাঙ্গালার নব্য লেখকদিগের প্রতি নিবেদন','গদ্য 02 • অপরিচিতা','গদ্য 03 • সাহিত্যে খেলা','গদ্য 04 • বিলাসী','গদ্য 05 • অর্ধাঙ্গী','গদ্য 06 • যৌবনের গান','গদ্য 07 • জীবন ও বৃক্ষ','গদ্য 08 • গন্তব্য কাবুল','গদ্য 09 • মাসি-পিসি','গদ্য 10 • কপিলদাস মুর্মুর শেষ কাজ','গদ্য 11 • রেইনকোট','গদ্য 12 • নেকলেস','পদ্য 01 • ঋতু-বর্ণন','পদ্য 02 • বিভীষণের প্রতি মেঘনাদ','পদ্য 03 • সোনার তরী','পদ্য 04 • বিদ্রোহী','পদ্য 05 • সুচেতনা','পদ্য 06 • প্রতিদান','পদ্য 07 • তাহারেই পড়ে মনে','পদ্য 08 • পদ্মা','পদ্য 09 • ফেব্রুয়ারি ১৯৬৯','পদ্য 10 • আঠার বছর বয়স','পদ্য 11 • আমি কিংবদন্তির কথা বলছি','পদ্য 12 • প্রত্যাবর্তনের লজ্জা','সহপাঠ • লালসালু','সহপাঠ • সিরাজউদ্দৌলা']},
+{id:'bangla2',group:'languages',name:'Bangla 2nd Paper',bn:'বাংলা ২য় পত্র',items:['ব্যাকরণ • বাংলা ভাষা ও ব্যাকরণের ভিত্তি','ব্যাকরণ • উচ্চারণ ও বানান','ব্যাকরণ • শব্দশ্রেণি','ব্যাকরণ • শব্দগঠন: উপসর্গ ও প্রত্যয়','ব্যাকরণ • সন্ধি','ব্যাকরণ • সমাস','ব্যাকরণ • কারক ও বিভক্তি','ব্যাকরণ • ধাতু ও ক্রিয়া','ব্যাকরণ • কাল, ভাব ও বাচ্য','ব্যাকরণ • বাক্য ও বাক্যরীতি','ব্যাকরণ • শুদ্ধ প্রয়োগ ও শুদ্ধকরণ','ব্যাকরণ • বিরামচিহ্ন','ব্যাকরণ • বাগধারা ও প্রবাদ-প্রবচন','নির্মিতি • সারাংশ/সারমর্ম','নির্মিতি • ভাবসম্প্রসারণ','নির্মিতি • প্রতিবেদন','নির্মিতি • পত্র/আবেদনপত্র','নির্মিতি • প্রবন্ধ রচনা']},
+{id:'eng1',group:'languages',name:'English 1st Paper',bn:'English for Today',items:['Unit 1 • Education and Life','Unit 2 • Art and Craft','Unit 3 • Myths and Literature','Unit 4 • History','Unit 5 • Human Rights','Unit 6 • Dreams','Unit 7 • Youthful Achievers','Unit 8 • Relationships','Unit 9 • Adolescence','Unit 10 • Lifestyle','Unit 11 • Peace and Conflict','Unit 12 • Environment and Nature']},
+{id:'eng2',group:'languages',name:'English 2nd Paper',bn:'Grammar + Writing',items:['Grammar • Parts of Speech & Word Classes','Grammar • Articles & Determiners','Grammar • Tenses','Grammar • Subject–Verb Agreement','Grammar • Right Form of Verbs','Grammar • Modals','Grammar • Voice Change','Grammar • Narration / Direct–Indirect Speech','Grammar • Transformation of Sentences','Grammar • Completing Sentences','Grammar • Connectors / Linkers','Grammar • Punctuation & Capitalization','Writing • Paragraph','Writing • E-mail / Informal Letter','Writing • Graph / Chart','Writing • Report','Writing • Story / Creative Composition']},
+{id:'ict',group:'other',name:'ICT',bn:'তথ্য ও যোগাযোগ প্রযুক্তি',items:['1. তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত','2. কমিউনিকেশন সিস্টেমস ও নেটওয়ার্কিং','3. সংখ্যা পদ্ধতি ও ডিজিটাল ডিভাইস','4. ওয়েব ডিজাইন পরিচিতি এবং HTML','5. প্রোগ্রামিং ভাষা','6. ডেটাবেজ ম্যানেজমেন্ট সিস্টেম']}
+];
+const KEY='ch-ai-v1';
+// Paste the Project URL and anon/public key from Supabase -> Project Settings -> API.
+// The anon/public key is intended for browser use only when Row Level Security is enabled.
+// NEVER put a service_role/secret key in this HTML file.
+const SUPABASE_URL='https://ozfcptriqmccdaskpceg.supabase.co';
+const SUPABASE_ANON_KEY='sb_publishable_OKotAI_STKittVCIZfqRwQ_lchPhT-U';
+const cloudConfigured=!!(window.supabase && SUPABASE_URL.startsWith('https://') &&
+  !SUPABASE_URL.includes('PASTE_') && !SUPABASE_ANON_KEY.includes('PASTE_'));
+const cloudClient=cloudConfigured?window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY):null;
+let cloudUser=null, cloudSaveTimer=null, cloudBusy=false;
+const fresh=()=>({syllabus:{},tasks:[],goals:[],notes:[],sessions:[]});
+let state;try{state=JSON.parse(localStorage.getItem(KEY))||fresh()}catch(e){state=fresh()}
+state.syllabus ||= {};state.tasks ||= [];state.goals ||= [];state.notes ||= [];state.sessions ||= [];
+let activeFilter='all',syllSearch='',timer=null,remaining=1500,startedAt=0,initialSeconds=1500;
+const $=id=>document.getElementById(id);
+function persist(){
+  localStorage.setItem(KEY,JSON.stringify(state));
+  renderAll();
+  if(cloudUser && cloudConfigured){
+    clearTimeout(cloudSaveTimer);
+    cloudSaveTimer=setTimeout(()=>saveCloudData(),700);
+  }
+}
+function setCloudStatus(message,isError=false){
+  const el=$('cloudStatus');
+  if(!el)return;
+  el.textContent=message;
+  el.style.borderColor=isError?'#8b354a':'';
+  el.style.color=isError?'#fecdd3':'';
+}
+function updateAuthUI(){
+  if($('signOutBtn'))$('signOutBtn').hidden=!cloudUser;
+  if($('signInBtn'))$('signInBtn').hidden=!!cloudUser;
+  if($('signUpBtn'))$('signUpBtn').hidden=!!cloudUser;
+  if($('authEmail') && cloudUser)$('authEmail').value=cloudUser.email||'';
+  if($('authPassword') && cloudUser)$('authPassword').value='';
+}
+function cleanCloudData(d){
+  return {
+    syllabus:d&&d.syllabus&&typeof d.syllabus==='object'?d.syllabus:{},
+    tasks:d&&Array.isArray(d.tasks)?d.tasks:[],
+    goals:d&&Array.isArray(d.goals)?d.goals:[],
+    notes:d&&Array.isArray(d.notes)?d.notes:[],
+    sessions:d&&Array.isArray(d.sessions)?d.sessions:[]
+  };
+}
+async function saveCloudData(){
+  if(!cloudClient||!cloudUser||cloudBusy)return;
+  cloudBusy=true;
+  try{
+    const {error}=await cloudClient.from('study_data').upsert({
+      user_id:cloudUser.id,data:state,updated_at:new Date().toISOString()
+    },{onConflict:'user_id'});
+    if(error)throw error;
+    setCloudStatus('Cloud sync complete. Your data is saved to your account.');
+  }catch(e){
+    setCloudStatus('Cloud save failed: '+(e.message||'Check your Supabase table and security policies.'),true);
+  }finally{cloudBusy=false;}
+}
+async function loadCloudData(){
+  if(!cloudClient||!cloudUser)return;
+  cloudBusy=true;
+  setCloudStatus('Loading your cloud data…');
+  try{
+    const {data,error}=await cloudClient.from('study_data').select('data').eq('user_id',cloudUser.id).maybeSingle();
+    if(error)throw error;
+    if(data && data.data){
+      state=cleanCloudData(data.data);
+      localStorage.setItem(KEY,JSON.stringify(state));
+      renderAll();
+      setCloudStatus('Cloud data loaded. Your account is ready to use on this device.');
+    }else{
+      state=cleanCloudData(state);
+      // Release the load lock before the first save; saveCloudData uses its own lock.
+      cloudBusy=false;
+      await saveCloudData();
+      setCloudStatus('New cloud record created from this browser’s current data.');
+    }
+  }catch(e){
+    setCloudStatus('Could not load cloud data: '+(e.message||'Check your Supabase table and Row Level Security policies.'),true);
+  }finally{cloudBusy=false;updateAuthUI();}
+}
+async function signUp(){
+  if(!cloudClient)return setCloudStatus('Cloud sync is not configured. Add your Supabase URL and anon/public key in the HTML first.',true);
+  const email=$('authEmail').value.trim(),password=$('authPassword').value;
+  if(!email||!password)return setCloudStatus('Enter an email and password first.',true);
+  if(password.length<6)return setCloudStatus('Use a password with at least 6 characters.',true);
+  try{
+    const {data,error}=await cloudClient.auth.signUp({email,password});
+    if(error)throw error;
+    if(data.session){
+      cloudUser=data.user;updateAuthUI();await loadCloudData();
+    }else{
+      setCloudStatus('Account request submitted. Check your email for a confirmation link, then log in.');
+    }
+  }catch(e){setCloudStatus('Sign-up failed: '+(e.message||'Please try again.'),true);}
+}
+async function signIn(){
+  if(!cloudClient)return setCloudStatus('Cloud sync is not configured. Add your Supabase URL and anon/public key in the HTML first.',true);
+  const email=$('authEmail').value.trim(),password=$('authPassword').value;
+  if(!email||!password)return setCloudStatus('Enter your email and password first.',true);
+  try{
+    const {data,error}=await cloudClient.auth.signInWithPassword({email,password});
+    if(error)throw error;
+    cloudUser=data.user;updateAuthUI();await loadCloudData();
+  }catch(e){setCloudStatus('Login failed: '+(e.message||'Check your email and password.'),true);}
+}
+async function signOut(){
+  if(!cloudClient)return;
+  try{
+    const {error}=await cloudClient.auth.signOut();
+    if(error)throw error;
+    cloudUser=null;updateAuthUI();
+    setCloudStatus('Logged out. This browser’s local copy remains available.');
+  }catch(e){setCloudStatus('Could not log out: '+(e.message||'Please try again.'),true);}
+}
+async function initCloud(){
+  if(!cloudConfigured){
+    setCloudStatus('Local-only mode: add your Supabase project URL and anon/public key in the HTML, then publish again.');
+    return;
+  }
+  $('signUpBtn').onclick=signUp;
+  $('signInBtn').onclick=signIn;
+  $('signOutBtn').onclick=signOut;
+  $('syncNowBtn').onclick=async()=>{if(!cloudUser){setCloudStatus('Log in first to sync your account.',true);return;}await saveCloudData();};
+  try{
+    const {data,error}=await cloudClient.auth.getSession();
+    if(error)throw error;
+    cloudUser=data.session?.user||null;
+    updateAuthUI();
+    if(cloudUser)await loadCloudData();
+    else setCloudStatus('Supabase is connected. Create an account or log in to enable cloud sync.');
+    cloudClient.auth.onAuthStateChange((_event,session)=>{
+      cloudUser=session?.user||null;
+      updateAuthUI();
+      if(cloudUser) setTimeout(()=>loadCloudData(),0);
+    });
+  }catch(e){setCloudStatus('Supabase connection error: '+(e.message||'Check the project URL and public key.'),true);}
+}
+function esc(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function go(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));if(id==='timer')updateTimerDisplay();window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>go(b.dataset.page));
+function done(s,i){return !!state.syllabus[s+':'+i]}
+function stats(s){let d=s.items.filter((_,i)=>done(s.id,i)).length;return {d,t:s.items.length,p:s.items.length?Math.round(d/s.items.length*100):0}}
+function overall(){let d=0,t=0;DATA.forEach(s=>{let z=stats(s);d+=z.d;t+=z.t});return {d,t,p:t?Math.round(d/t*100):0}}
+function renderSyllabus(){let root=$('subjects'),list=DATA.filter(s=>activeFilter==='all'||s.group===activeFilter).filter(s=>!syllSearch||(s.name+' '+s.bn+' '+s.items.join(' ')).toLowerCase().includes(syllSearch.toLowerCase()));root.innerHTML=list.map(s=>{let z=stats(s);return `<article class="card subject"><div class="subjecthead"><div><h3>${esc(s.name)}</h3><small>${esc(s.bn)}</small></div><span class="pct">${z.p}%</span></div><div class="progress"><i style="width:${z.p}%"></i></div><details class="paper" open><summary><span>Chapter / topic checklist</span><span>${z.d}/${z.t}</span></summary><div class="paperitems">${s.items.map((x,i)=>`<label class="syllitem ${done(s.id,i)?'done':''}"><input type="checkbox" data-s="${s.id}" data-i="${i}" ${done(s.id,i)?'checked':''}><span>${esc(x)}</span></label>`).join('')}</div></details><div class="small" style="padding:0 16px 13px">${z.d} completed · ${z.t-z.d} remaining</div></article>`}).join('')||'<div class="card empty">No matching topics.</div>';root.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.onchange=()=>{state.syllabus[cb.dataset.s+':'+cb.dataset.i]=cb.checked;persist()})}
+document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-filter]').forEach(x=>x.classList.toggle('active',x===b));activeFilter=b.dataset.filter;renderSyllabus()});
+$('syllSearch').oninput=e=>{syllSearch=e.target.value.trim();renderSyllabus()};
+function resetSyllabus(){if(confirm('Reset all syllabus checkmarks on this device? Export a backup first if needed.')){state.syllabus={};persist()}}
+function addTask(){let title=$('taskTitle').value.trim();if(!title)return alert('Enter a task name.');state.tasks.unshift({id:Date.now(),title,due:$('taskDue').value,priority:$('taskPriority').value,category:$('taskCategory').value,done:false,created:new Date().toISOString()});$('taskTitle').value='';$('taskDue').value='';persist()}
+function addGoal(){let title=$('goalTitle').value.trim();if(!title)return alert('Enter a goal.');state.goals.unshift({id:Date.now(),title,due:$('goalDue').value,done:false});$('goalTitle').value='';$('goalDue').value='';persist()}
+function toggle(type,id){let x=state[type].find(x=>x.id===id);if(x)x.done=!x.done;persist()}
+function remove(type,id){if(confirm('Delete this item?')){state[type]=state[type].filter(x=>x.id!==id);persist()}}
+function taskHtml(x,type){return `<div class="item"><div class="itemtop"><label class="checkrow ${x.done?'done':''}"><input type="checkbox" ${x.done?'checked':''} onchange="toggle('${type}',${x.id})"><span><strong>${esc(x.title)}</strong><div class="meta">${x.due?'Due '+esc(x.due)+' · ':''}${esc(x.category||'Goal')}${x.priority?' · '+esc(x.priority)+' priority':''}</div></span></label><button class="danger" style="padding:5px 9px" onclick="remove('${type}',${x.id})">×</button></div></div>`}
+function renderTasks(){let ts=[...state.tasks].sort((a,b)=>Number(a.done)-Number(b.done));$('taskList').innerHTML=ts.map(x=>taskHtml(x,'tasks')).join('')||'<div class="empty">No tasks yet.</div>';$('goalList').innerHTML=state.goals.map(x=>taskHtml(x,'goals')).join('')||'<div class="empty">No goals yet.</div>';let today=new Date().toISOString().slice(0,10),tod=state.tasks.filter(x=>!x.done&&(!x.due||x.due<=today));$('todayTasks').innerHTML=tod.slice(0,5).map(x=>`<div class="item"><label class="checkrow"><input type="checkbox" onchange="toggle('tasks',${x.id})"><span>${esc(x.title)}<div class="meta">${esc(x.category)}${x.due?' · '+esc(x.due):''}</div></span></label></div>`).join('')||'<div class="empty">No urgent tasks. Add a task to plan your day.</div>'}
+function addNote(){let title=$('noteTitle').value.trim(),body=$('noteBody').value.trim();if(!title||!body)return alert('Add both a title and a note.');state.notes.unshift({id:Date.now(),title,body,type:$('noteType').value,subject:$('noteSubject').value.trim(),date:new Date().toISOString()});$('noteTitle').value='';$('noteBody').value='';$('noteSubject').value='';persist()}
+function renderNotes(){let q=($('noteSearch').value||'').toLowerCase(),ns=state.notes.filter(n=>(n.title+n.body+n.type+n.subject).toLowerCase().includes(q));$('noteList').innerHTML=ns.map(n=>`<article class="note"><div class="itemtop"><strong>${esc(n.title)}</strong><button class="danger" style="padding:4px 8px" onclick="remove('notes',${n.id})">×</button></div><span class="tag">${esc(n.type)}</span>${n.subject?`<span class="tag">${esc(n.subject)}</span>`:''}<p>${esc(n.body)}</p><div class="small">${new Date(n.date).toLocaleDateString()}</div></article>`).join('')||'<div class="card empty">No notes found.</div>'}
+$('noteSearch').oninput=renderNotes;
+function updateTimerDisplay(){let n=Math.max(0,remaining),m=Math.floor(n/60),s=n%60;$('timerDisplay').textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0')}
+function setDuration(){let n=Math.min(180,Math.max(1,Number($('duration').value)||25));remaining=n*60;initialSeconds=remaining;updateTimerDisplay()}
+$('duration').onchange=()=>{if(!timer)setDuration()};
+function toggleTimer(){if(timer){clearInterval(timer);timer=null;$('startPause').textContent='Resume focus';return}if(remaining<=0)setDuration();startedAt=Date.now();$('startPause').textContent='Pause';$('timerLabel').textContent='FOCUS SESSION IN PROGRESS';timer=setInterval(()=>{remaining=Math.max(0,Math.ceil((initialSeconds*1000-(Date.now()-startedAt))/1000));updateTimerDisplay();if(remaining<=0){clearInterval(timer);timer=null;$('startPause').textContent='Start focus';finishSession(true)}},250)}
+function resetTimer(){if(timer)clearInterval(timer);timer=null;setDuration();$('startPause').textContent='Start focus';$('timerLabel').textContent='FOCUS SESSION'}
+function finishSession(completed){let elapsed=Math.max(1,Math.round((initialSeconds-remaining)/60));if(completed)elapsed=Math.max(1,Math.round(initialSeconds/60));state.sessions.unshift({id:Date.now(),subject:$('sessionSubject').value,topic:$('sessionTopic').value.trim()||'Focus session',reflection:$('sessionReflection').value.trim(),minutes:elapsed,date:new Date().toISOString()});persist();$('sessionTopic').value='';$('sessionReflection').value='';if(completed)alert('Focus session complete! Logged '+elapsed+' minute(s).');resetTimer()}
+function logManualSession(){let topic=$('sessionTopic').value.trim();if(!topic)topic='Study session';let mins=Number(prompt('How many minutes did you study?', '25'));if(!Number.isFinite(mins)||mins<=0)return;state.sessions.unshift({id:Date.now(),subject:$('sessionSubject').value,topic,reflection:$('sessionReflection').value.trim(),minutes:Math.round(mins),date:new Date().toISOString()});$('sessionTopic').value='';$('sessionReflection').value='';persist()}
+function renderLogs(){$('logTotal').textContent=state.sessions.length+' sessions';$('logList').innerHTML=state.sessions.map(s=>`<div class="item"><div class="itemtop"><strong>${esc(s.topic)}</strong><span class="tag">${s.minutes} min</span></div><div class="meta">${esc(s.subject)} · ${new Date(s.date).toLocaleString()}</div>${s.reflection?`<p class="small">${esc(s.reflection)}</p>`:''}<div class="actions"><button class="danger" onclick="remove('sessions',${s.id})">Delete</button></div></div>`).join('')||'<div class="empty">No study sessions logged yet. Start a timer or add one manually.</div>'}
+function exportData(){let blob=new Blob([JSON.stringify({app:'CH AI',version:1,exportedAt:new Date().toISOString(),...state},null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='ch-ai-backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+$('exportTop').onclick=exportData;
+function importData(e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{let d=JSON.parse(r.result);if(!confirm('Replace current CH AI data with this backup?'))return;state={...fresh(),syllabus:d.syllabus||{},tasks:Array.isArray(d.tasks)?d.tasks:[],goals:Array.isArray(d.goals)?d.goals:[],notes:Array.isArray(d.notes)?d.notes:[],sessions:Array.isArray(d.sessions)?d.sessions:[]};persist();alert('Backup imported.')}catch(err){alert('Invalid CH AI backup file.')}e.target.value=''};r.readAsText(f)}
+$('importFile').onchange=importData;
+function clearAll(){if(confirm('Delete all CH AI data saved in this browser? Export a backup first if you need it.')){state=fresh();persist()}}
+function renderHome(){let o=overall();$('overall').textContent=o.p+'%';$('ring').style.setProperty('--p',o.p);$('doneCount').textContent=o.d;$('totalMinutes').textContent=state.sessions.reduce((a,s)=>a+s.minutes,0)+'m';$('openTasks').textContent=state.tasks.filter(x=>!x.done).length;let days=new Set(state.sessions.map(s=>s.date.slice(0,10)));$('streak').textContent=days.size}
+function renderAll(){renderSyllabus();renderTasks();renderNotes();renderLogs();renderHome()}
+renderAll();
+initCloud();
+</script></body></html>
